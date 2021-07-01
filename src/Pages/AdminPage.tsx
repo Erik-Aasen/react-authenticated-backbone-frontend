@@ -44,12 +44,12 @@ export default function AdminPage() {
         }).then((res: AxiosResponse) => {
             if (res.data === "user deleted") {
                 // window.location.href = "/"
-                // setSelectedUser('');
+                setSelectedUser('');
                 // window.location.href = window.location.href;
                 // setTimeout(function(){
                 //     window.location.reload();
                 //   });
-                history.go(0);
+                // history.go(0);
             }
         })       
     }
@@ -68,7 +68,7 @@ export default function AdminPage() {
                     })
                 }
             </select>
-            <button onClick={deleteUser}>Delete</button>
+            <button value={selectedUser} onClick={deleteUser}>Delete</button>
         </div>
     )
 }
