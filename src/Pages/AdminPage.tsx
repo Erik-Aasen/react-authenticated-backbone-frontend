@@ -54,7 +54,7 @@ export default function AdminPage() {
         <div>
             <h1>Admin page, only admins can see this.</h1>
             <select onChange={e => setSelectedUser(e.target.value)} name="deleteuser" id="deleteuser">
-                <option id="Select a user">Select a user</option>
+                <option value={selectedUser} id="Select a user">Select a user</option>
                 {
                     data.map((item: UserInterface) => {
                         return (
