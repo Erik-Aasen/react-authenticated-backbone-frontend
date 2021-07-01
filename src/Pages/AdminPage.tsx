@@ -45,7 +45,10 @@ export default function AdminPage() {
             if (res.data === "user deleted") {
                 // window.location.href = "/"
                 // setSelectedUser('');
-                window.location.href = window.location.href;
+                // window.location.href = window.location.href;
+                setTimeout(function(){
+                    window.location.reload();
+                  });
             }
         })       
     }
