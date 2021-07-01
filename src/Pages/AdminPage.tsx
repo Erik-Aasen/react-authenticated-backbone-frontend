@@ -44,7 +44,8 @@ export default function AdminPage() {
         }).then((res: AxiosResponse) => {
             if (res.data === "user deleted") {
                 // window.location.href = "/"
-                setSelectedUser('');
+                // setSelectedUser('');
+                window.location.href = window.location.href;
             }
         })       
     }
@@ -54,7 +55,7 @@ export default function AdminPage() {
         <div>
             <h1>Admin page, only admins can see this.</h1>
             <select onChange={e => setSelectedUser(e.target.value)} name="deleteuser" id="deleteuser">
-                <option value={selectedUser} id="Select a user">Select a user</option>
+                <option id="Select a user">Select a user</option>
                 {
                     data.map((item: UserInterface) => {
                         return (
