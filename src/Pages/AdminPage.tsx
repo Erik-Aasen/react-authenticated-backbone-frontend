@@ -41,9 +41,11 @@ export default function AdminPage() {
             id: userid!  //! tells react that we know there will be a userid as a string since it will be defined in the if statement. React worries that it might not get defined and then not have the chance to be a string
         }, {
             withCredentials: true
-        });
-
-        // window.location.href = "/admin"
+        }).then((res: AxiosResponse) => {
+            if (res.data === "user deleted") {
+                window.location.href = "/admin"
+            }
+        })       
     }
 
 
