@@ -23,8 +23,8 @@ export default function Register() {
     return (
         <div>
             <h1>Register</h1>
-            <input type="text" placeholder="username" onChange={e => setUsername(e.target.value)} />
-            <input type="text" placeholder="password" onChange={e => setPassword(e.target.value)} />
+            <input type="text" value={username} placeholder="username" onChange={e => setUsername(e.target.value)} />
+            <input type="text" value={password} placeholder="password" onChange={e => setPassword(e.target.value)} />
             <button onClick={register}>Register</button>
         </div>
     )
