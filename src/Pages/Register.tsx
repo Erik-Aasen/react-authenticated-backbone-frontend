@@ -14,7 +14,7 @@ export default function Register() {
         }).then((res: AxiosResponse) => {
             // console.log(res.data);
             if (res.data === "registered") {
-                window.location.reload();
+                window.location.reload(false);
         }
         })
     }
