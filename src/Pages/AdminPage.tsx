@@ -19,7 +19,7 @@ export default function AdminPage() {
             }))
             // setData(res.data)
         })
-    }, [ctx.username]);
+    }, []);
 
     if (!data) {
         return null;
