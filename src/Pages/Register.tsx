@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useHistory } from 'react-router';
+import { useHistory } from 'react-router-dom';
 import axios, { AxiosResponse } from 'axios';
 
 export default function Register() {
