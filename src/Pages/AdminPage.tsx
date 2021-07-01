@@ -27,7 +27,7 @@ export default function AdminPage() {
         // console.log(data);
     }
 
-    const deleteUser = async () => {
+    const deleteUser = () => {
         let userid: string;
         data.forEach((item: UserInterface) => {
 
@@ -37,13 +37,13 @@ export default function AdminPage() {
         })
         // console.log(userid);
 
-        await Axios.post("https://react-authenticated-backbone.herokuapp.com/deleteuser", {
+        Axios.post("https://react-authenticated-backbone.herokuapp.com/deleteuser", {
             id: userid!  //! tells react that we know there will be a userid as a string since it will be defined in the if statement. React worries that it might not get defined and then not have the chance to be a string
         }, {
             withCredentials: true
         });
 
-        window.location.href = "/"
+        window.location.href = "/admin"
     }
 
 
