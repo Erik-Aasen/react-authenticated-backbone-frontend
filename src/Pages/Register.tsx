@@ -14,9 +14,9 @@ export default function Register() {
         }).then((res: AxiosResponse) => {
             // console.log(res.data);
             if (res.data === "registered") {
-                setUsername("");
-                setPassword("");
-                window.location.href = "/"
+                // setUsername("");
+                // setPassword("");
+                window.location.href = "/login"
         }
         })
     }
