@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { useHistory } from 'react-router';
 import axios, { AxiosResponse } from 'axios';
 
 export default function Register() {
@@ -16,7 +17,9 @@ export default function Register() {
             if (res.data === "registered") {
                 setUsername("");
                 setPassword("");
-                window.location.href = "/login"
+                // window.location.href = "/login"
+                let history = useHistory();
+                history.push('/login');
         }
         })
     }
