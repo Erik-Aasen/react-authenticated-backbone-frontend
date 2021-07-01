@@ -43,7 +43,7 @@ export default function AdminPage() {
             withCredentials: true
         }).then((res: AxiosResponse) => {
             if (res.data === "user deleted") {
-                window.location.href = "/admin"
+                window.location.href = "/"
             }
         })       
     }
