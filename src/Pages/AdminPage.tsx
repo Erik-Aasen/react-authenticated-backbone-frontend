@@ -43,7 +43,7 @@ export default function AdminPage() {
             withCredentials: true
         });
 
-        window.location.href = "/admin"
+        window.location.href = "/"
     }
 
 
