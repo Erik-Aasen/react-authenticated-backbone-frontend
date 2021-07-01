@@ -5,12 +5,13 @@ import { useState, useEffect } from 'react';
 import { UserInterface } from '../Interfaces/Interfaces';
 
 export default function AdminPage() {
-    const ctx = useContext(myContext);
+    
 
     const [data, setData] = useState<UserInterface[]>();
     const [selectedUser, setSelectedUser] = useState<any>();
 
     useEffect(() => {
+        const ctx = useContext(myContext);
         Axios.get("https://react-authenticated-backbone.herokuapp.com/getallusers", {
             withCredentials: true
         }).then((res: AxiosResponse) => {
