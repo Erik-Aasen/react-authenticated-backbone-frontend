@@ -5,8 +5,8 @@ export default function Login() {
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
 
-    const login = () => {
-        axios.post('https://react-authenticated-backbone.herokuapp.com/login', {
+    const login = async () => {
+        await axios.post('https://react-authenticated-backbone.herokuapp.com/login', {
             username,
             password
         }, {
