@@ -2,12 +2,14 @@ import React, {useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import axios, { AxiosResponse } from 'axios';
 
-let history = useHistory();
+
 
 export default function Register() {
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
 
+    let history = useHistory();
+    
     const register = () => {
         axios.post('https://react-authenticated-backbone.herokuapp.com/register', {
             username,
