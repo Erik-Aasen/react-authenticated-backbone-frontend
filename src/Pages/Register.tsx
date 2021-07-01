@@ -16,6 +16,7 @@ export default function Register() {
             if (res.data === "registered") {
                 setUsername("");
                 setPassword("");
+                window.location.href = "/"
         }
         })
     }
