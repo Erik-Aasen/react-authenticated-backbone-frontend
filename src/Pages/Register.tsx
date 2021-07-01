@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import { useHistory } from 'react-router-dom';
 import axios, { AxiosResponse } from 'axios';
 
+let history = useHistory();
+
 export default function Register() {
     const [username, setUsername] = useState<string>("");
     const [password, setPassword] = useState<string>("");
@@ -18,7 +20,7 @@ export default function Register() {
                 setUsername("");
                 setPassword("");
                 // window.location.href = "/login"
-                let history = useHistory();
+                
                 history.push('/login');
         }
         })
