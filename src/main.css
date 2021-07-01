@@ -7,6 +7,7 @@
 .NavContainer {
     width: 100vw;
     height: 100px;
+    margin: 10px 10px;
     background: green;
     display: flex;
     align-items: center;
