@@ -46,9 +46,10 @@ export default function AdminPage() {
                 // window.location.href = "/"
                 // setSelectedUser('');
                 // window.location.href = window.location.href;
-                setTimeout(function(){
-                    window.location.reload();
-                  });
+                // setTimeout(function(){
+                //     window.location.reload();
+                //   });
+                history.go(0);
             }
         })       
     }
